@@ -5,7 +5,7 @@ import wolf from '../../assets/wolf.gif'
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super()
   }
@@ -51,12 +51,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   houseData: state.hasFetchedHouseData,
   isLoading: state.isLoading
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   fetchData: () => dispatch(fetchHouseData())
 })
 
