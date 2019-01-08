@@ -3,9 +3,9 @@ export const isLoading = (bool) => ({
   bool
 })
 
-export const hasErrored = (bool) => ({
+export const hasErrored = (errorMessage) => ({
   type: 'HAS_ERRORED',
-  bool
+  errorMessage
 })
 
 export const hasFetchedHouseData = (houseData) => ({

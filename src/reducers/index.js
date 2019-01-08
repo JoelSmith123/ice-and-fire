@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux'
-import { getHouseData } from './getHouseData.js'
+import { isLoading, hasErrored, hasFetchedHouseData } from './getHouseData.js'
 
 
-export default const rootReducer = combineReducers({
-  getHouseData
+const rootReducer = combineReducers({
+  isLoading,
+  hasErrored,
+  hasFetchedHouseData
 })
+
+export default rootReducer
