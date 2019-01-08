@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    
+  }
 
   render() {
     return (
@@ -12,6 +15,7 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
+
         </div>
       </div>
     );
