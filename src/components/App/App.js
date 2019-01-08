@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import { mapStateToProps } from 'react-redux'
 import { connect } from 'react-redux'
 import { fetchHouseData } from '../../thunks/fetchHouseData'
+import wolf from '../../assets/wolf.gif'
 import logo from './logo.svg';
 import './App.css';
 
@@ -24,8 +24,13 @@ class App extends Component {
         <div className='Display-info'>
           <div className='Container'>
             {
+              this.props.isLoading ? 
+
+                <img id='wolf' src={wolf} />
+
+              : 
+                          
               this.props.houseData.map(house => {
-                console.log(house)
                 return (
                   <div className='Card'>
                     <h1>{house.name}</h1>
@@ -47,7 +52,8 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  houseData: state.hasFetchedHouseData
+  houseData: state.hasFetchedHouseData,
+  isLoading: state.isLoading
 })
 
 const mapDispatchToProps = (dispatch) => ({
